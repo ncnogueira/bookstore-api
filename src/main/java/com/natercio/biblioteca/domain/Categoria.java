@@ -53,16 +53,24 @@ public class Categoria implements Serializable {
         this.descricao = descricao;
     }
 
+    public List<Livro> getLivros() {
+        return livros;
+    }
+
+    public void setLivros(List<Livro> livros) {
+        this.livros = livros;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Categoria)) return false;
         Categoria categoria = (Categoria) o;
-        return getId().equals(categoria.getId()) && Objects.equals(getNome(), categoria.getNome()) && Objects.equals(getDescricao(), categoria.getDescricao());
+        return getId().equals(categoria.getId()) && getNome().equals(categoria.getNome()) && getDescricao().equals(categoria.getDescricao()) && Objects.equals(getLivros(), categoria.getLivros());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getId());
+        return Objects.hash(getId(), getNome(), getDescricao(), getLivros());
     }
 }
