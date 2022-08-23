@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api/hello")
 public class HelloWord {
 
-    @GetMapping("buscar")
-    public String getHello(){
-        return "Hello Word... This is you new biblioteca app...";
-    }
+	@GetMapping("buscar")
+	public String getHello() {
+		return "Hello Word... This is you new biblioteca app...";
+	}
 }

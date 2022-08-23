@@ -8,21 +8,21 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Profile;
 
 @Configuration
-@Profile("dev")
+@Profile("test")
 public class DevConfig {
 
-    @Autowired
-    private DBService dbService;
+	@Autowired
+	private DBService dbService;
 
-    @Value("${spring.jpa.hibernate.dll-auto}")
-    private String strategy;
+	@Value("${spring.jpa.hibernate.dll-auto}")
+	private String strategy;
 
-    @Bean
-    public boolean instanciaBaseDeDados(){
-        if(strategy.equals("create")){
-            this.dbService.instanciaBaseDeDados();
-        }
-        return false;
-    }
+	@Bean
+	public boolean instanciaBaseDeDados() {
+		if (strategy.equals("create")) {
+			this.dbService.instanciaBaseDeDados();
+		}
+		return false;
+	}
 
 }
