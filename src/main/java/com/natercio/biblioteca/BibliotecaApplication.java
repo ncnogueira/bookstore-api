@@ -41,14 +41,21 @@ public class BibliotecaApplication implements CommandLineRunner {
 		Livro L6 = new Livro(null,"A búsula dourada", "Phillip Pullman", "Loren Ipsum", cat3);
 		Livro L7 = new Livro(null,"A Luneta Ambar", "Phillip Pullman", "Loren Ipsum", cat3);
 		Livro L8 = new Livro(null,"Uma breve história do tempo", "Stephen Hawking", "Loren Ipsum", cat4);
+		Livro L9 = new Livro(null,"Livro 09", "Fulano de Tal", "Loren Ipsum", cat3);
+		Livro L10 = new Livro(null,"Livro 10", "Cicrano das Tantas", "Loren Ipsum", cat2);
+		Livro L11 = new Livro(null,"Livro 11", "Beutrano das Tantas e Tal", "Loren Ipsum", cat1);
+		Livro L12 = new Livro(null,"Livro 12", "Zeutrano de Tal e Tantas", "Loren Ipsum", cat4);
+		Livro L13 = new Livro(null,"Livro 12", "Zeutrano de Tal e Tantas", "Loren Ipsum", cat4);
+		Livro L14 = new Livro(null,"Livro 12", "Zeutrano de Tal e Tantas", "Loren Ipsum", cat4);
+		Livro L15 = new Livro(null,"Livro 12", "Zeutrano de Tal e Tantas", "Loren Ipsum", cat4);
 
-		cat1.getLivros().addAll(Arrays.asList(l1,l2));
-		cat2.getLivros().addAll(Arrays.asList(l3,l4));
-		cat3.getLivros().addAll(Arrays.asList(L5,L6,L7));
-		cat4.getLivros().addAll(Arrays.asList(L8));
+		cat1.getLivros().addAll(Arrays.asList(l1,l2,L11));
+		cat2.getLivros().addAll(Arrays.asList(l3,l4,L10));
+		cat3.getLivros().addAll(Arrays.asList(L5,L6,L7,L9));
+		cat4.getLivros().addAll(Arrays.asList(L8,L12,L13,L14,L15));
 
 		this.categoriaRepository.saveAll(Arrays.asList(cat1,cat2,cat3,cat4));
-		this.livroRepository.saveAll(Arrays.asList(l1,l2,l3,l4,L5,L6,L7,L8));
+		this.livroRepository.saveAll(Arrays.asList(l1,l2,l3,l4,L5,L6,L7,L8,L9,L10,L11,L12,L13,L14,L15));
 
 	}
 }
