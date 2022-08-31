@@ -46,8 +46,8 @@ public class DBService {
 		cat3.getLivros().addAll(Arrays.asList(L5,L6,L7,L9));
 		cat4.getLivros().addAll(Arrays.asList(L8,L12,L13,L14,L15));
 
-		this.categoriaRepository.saveAll(Arrays.asList(cat1,cat2,cat3,cat4));
-		this.livroRepository.saveAll(Arrays.asList(l1,l2,l3,l4,L5,L6,L7,L8,L9,L10,L11,L12,L13,L14,L15));
+		categoriaRepository.saveAll(Arrays.asList(cat1,cat2,cat3,cat4));
+		livroRepository.saveAll(Arrays.asList(l1,l2,l3,l4,L5,L6,L7,L8,L9,L10,L11,L12,L13,L14,L15));
 		
 	}
 	

@@ -10,10 +10,10 @@ import com.natercio.biblioteca.service.DBService;
 @Configuration
 @Profile("test")
 public class TestConfig {
-	
+
 	@Autowired
 	private DBService dbService;
-	
+
 	@Bean
 	public void instanciaBaseDeDados() {
 		this.dbService.instanciaBaseDeDados();
