@@ -33,13 +33,13 @@ public class DBService {
 		Livro L6 = new Livro(null,"A búsula dourada", "Phillip Pullman", "Loren Ipsum", cat3);
 		Livro L7 = new Livro(null,"A Luneta Ambar", "Phillip Pullman", "Loren Ipsum", cat3);
 		Livro L8 = new Livro(null,"Uma breve história do tempo", "Stephen Hawking", "Loren Ipsum", cat4);
-		Livro L9 = new Livro(null,"Livro 09", "Fulano de Tal", "Loren Ipsum", cat3);
-		Livro L10 = new Livro(null,"Livro 10", "Cicrano das Tantas", "Loren Ipsum", cat2);
-		Livro L11 = new Livro(null,"Livro 11", "Beutrano das Tantas e Tal", "Loren Ipsum", cat1);
-		Livro L12 = new Livro(null,"Livro 12", "Zeutrano de Tal e Tantas", "Loren Ipsum", cat4);
-		Livro L13 = new Livro(null,"Livro 12", "Zeutrano de Tal e Tantas", "Loren Ipsum", cat4);
-		Livro L14 = new Livro(null,"Livro 12", "Zeutrano de Tal e Tantas", "Loren Ipsum", cat4);
-		Livro L15 = new Livro(null,"Livro 12", "Zeutrano de Tal e Tantas", "Loren Ipsum", cat4);
+		Livro L9 = new Livro(null,"A faca sutil", "Phillip Pullman", "Loren Ipsum", cat3);
+		Livro L10 = new Livro(null,"A volta ao mundo em 80 dias", "Cicrano das Tantas", "Loren Ipsum 10", cat2);
+		Livro L11 = new Livro(null,"Viagem ao Centro da terra", "Beutrano das Tantas e Tal", "Loren Ipsum 11", cat1);
+		Livro L12 = new Livro(null,"Fundamentos de Eletricidade", "Zeutrano de Tal e Tantas", "Loren Ipsum 12", cat4);
+		Livro L13 = new Livro(null,"Termondinâmica", "Zeutrano de Tal e Tantas", "Loren Ipsum 13", cat4);
+		Livro L14 = new Livro(null,"Optica, estudo dos espelhos e lentes", "Zeutrano de Tal e Tantas", "Loren Ipsum 14", cat4);
+		Livro L15 = new Livro(null,"Dinâmica, o estudo dos movimentos", "Zeutrano de Tal e Tantas", "Loren Ipsum 15", cat4);
 
 		cat1.getLivros().addAll(Arrays.asList(l1,l2,L11));
 		cat2.getLivros().addAll(Arrays.asList(l3,l4,L10));
