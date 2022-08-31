@@ -1,12 +1,14 @@
 package com.natercio.biblioteca.service;
 
-import com.natercio.biblioteca.domain.Categoria;
-import com.natercio.biblioteca.repositories.CategoriaRepository;
-import com.natercio.biblioteca.service.exceptions.ObjectNotFoundException;
+import java.util.List;
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.Optional;
+import com.natercio.biblioteca.domain.Categoria;
+import com.natercio.biblioteca.repositories.CategoriaRepository;
+import com.natercio.biblioteca.service.exceptions.ObjectNotFoundException;
 
 @Service
 public class CategoriaService {
@@ -19,5 +21,10 @@ public class CategoriaService {
         return obj.orElseThrow(() -> new ObjectNotFoundException(
                 "Objeto não encontrado! id: " + id + ", Tipo: " + Categoria.class.getName()));
 
+    }
+    
+    public List<Categoria> findAll(){
+    	return repository.findAll();
+    	
     }
 }
