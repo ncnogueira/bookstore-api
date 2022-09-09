@@ -13,6 +13,9 @@ import com.natercio.biblioteca.domain.Categoria;
 import com.natercio.biblioteca.dtos.CategoriaDTO;
 import com.natercio.biblioteca.service.CategoriaService;
 
+import javax.validation.Valid;
+
+@CrossOrigin("*")
 @RestController
 @RequestMapping(value = "/categorias")
 public class CategoriaResource {
@@ -37,7 +40,7 @@ public class CategoriaResource {
     
     
     @PostMapping
-    public ResponseEntity<Categoria> create(@RequestBody Categoria obj){
+    public ResponseEntity<Categoria> create(@Valid @RequestBody Categoria obj){
     	
     	obj = service.create(obj);
     	URI uri = ServletUriComponentsBuilder.fromCurrentRequest().path("/{id}").buildAndExpand(obj.getId()).toUri();
